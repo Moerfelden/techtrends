@@ -1,0 +1,62 @@
+## Docker commands used to build the application 
+# TODO: insert the docker build command
+docker build -t techtrends .
+# List the docker images
+docker images
+
+## Docker commands used to run the application
+# TODO: insert the docker run command
+# --name techtrends: This option assigns a name to the container. 
+docker run -d --name techtrends -p 7111:3111 techtrends
+# List all containers. The -a option shows all containers, including those that are stopped.
+docker ps -a
+
+## Docker commands used to get the application logs
+# TODO: insert the docker logs command
+# Retrieve the Docker container logs using the container name 
+docker logs -f techtrends
+
+## Logs from the container running the TechTrends application
+# TODO: paste logs from the Docker container 
+udacity@suse:project> docker logs -f techtrends
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+[05/16/2025 11:19:58 AM] - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[05/16/2025 11:19:58 AM] - werkzeug - INFO -  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+[05/16/2025 11:19:58 AM] - werkzeug - INFO -  * Restarting with stat
+[05/16/2025 11:19:58 AM] - werkzeug - WARNING -  * Debugger is active!
+[05/16/2025 11:19:58 AM] - werkzeug - INFO -  * Debugger PIN: 118-030-061
+[05/16/2025 11:21:14 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:21:14] "GET / HTTP/1.1" 200 -
+[05/16/2025 11:21:14 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:21:14] "GET /static/css/main.css HTTP/1.1" 200 -
+[05/16/2025 11:21:14 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:21:14] "GET /favicon.ico HTTP/1.1" 404 -
+[05/16/2025 11:24:05 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:24:05] "GET / HTTP/1.1" 200 –
+[05/16/2025 11:24:05 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:24:05] "GET /static/css/main.css HTTP/1.1" 200 -
+[05/16/2025 11:35:24 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:35:24] "GET /create HTTP/1.1" 200 -
+[05/16/2025 11:35:24 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:35:24] "GET /static/css/main.css HTTP/1.1" 304 -
+[05/16/2025 11:41:06 AM] - app - INFO - New article created: Kubeconfig
+[05/16/2025 11:41:06 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:41:06] "POST /create HTTP/1.1" 302 -
+[05/16/2025 11:41:06 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:41:06] "GET / HTTP/1.1" 200 -
+[05/16/2025 11:41:06 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:41:06] "GET /static/css/main.css HTTP/1.1" 304 -
+[05/16/2025 11:43:45 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:43:45] "GET /create HTTP/1.1" 200 -
+[05/16/2025 11:43:45 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:43:45] "GET /static/css/main.css HTTP/1.1" 304 -
+[05/16/2025 11:43:48 AM] - app - INFO - Page retrieved: About Us
+[05/16/2025 11:43:48 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:43:48] "GET /about HTTP/1.1" 200 -
+[05/16/2025 11:43:48 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:43:48] "GET /static/css/main.css HTTP/1.1" 304 -
+[05/16/2025 11:46:01 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:46:01] "GET / HTTP/1.1" 200 -
+[05/16/2025 11:46:01 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:46:01] "GET /static/css/main.css HTTP/1.1" 304 -
+[05/16/2025 11:49:12 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:49:12] "GET / HTTP/1.1" 200 -
+[05/16/2025 11:49:12 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:49:12] "GET /static/css/main.css HTTP/1.1" 304 -
+[05/16/2025 11:50:27 AM] - app - INFO - Article retrieved: 2020 CNCF Annual Report
+[05/16/2025 11:50:27 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:50:27] "GET /1 HTTP/1.1" 200 -
+[05/16/2025 11:50:27 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:50:27] "GET /static/css/main.css HTTP/1.1" 304 -
+[05/16/2025 11:50:58 AM] - app - INFO - Health check request successful
+[05/16/2025 11:50:58 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:50:58] "GET /healthz HTTP/1.1" 200 –
+[05/16/2025 11:52:37 AM] - app - INFO - Metrics request successful
+[05/16/2025 11:52:37 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:52:37] "GET /metrics HTTP/1.1" 200 -
+[05/16/2025 11:53:59 AM] - app - INFO - Article retrieved: Kubeconfig
+[05/16/2025 11:53:59 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:53:59] "GET /7 HTTP/1.1" 200 -
+[05/16/2025 11:53:59 AM] - werkzeug - INFO - 172.17.0.1 - - [16/May/2025 11:53:59] "GET /static/css/main.css HTTP/1.1" 304 -
