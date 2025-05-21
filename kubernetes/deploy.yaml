@@ -18,7 +18,7 @@ spec:
       containers:
       - image: yoram460/techtrends:latest
         imagePullPolicy: IfNotPresent
-        name: techtrends-cont
+        name: techtrends
         resources:
           requests:
             cpu: "250m"
